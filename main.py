@@ -5,7 +5,7 @@ print("Hello, welcome to the Math test. This tests addition, multiplycation, sub
 play = input("Whould you like to play? y or n.")
 play.lower()
 
-opporators = ['+', '-', '*', '**']
+opporators = ['+', '-', '*', '/', '**']
 rounds = 0
 i = 1
 score = 0
@@ -48,6 +48,19 @@ if play == 'y':
             elif playans != rand1 * rand2:
                 print("Incorrect")
                 i += 1
+        elif opp == '/':
+            rand1 = random.randint(1, 20)
+            rand2 = random.randint(1, 10)
+            rand3 = rand1 * rand2
+            playans = int(
+                input(f"What does {rand3} devided by {rand1} equal: "))
+            if playans == rand3 / rand1:
+                print("Correct")
+                i += 1
+                score += 1
+            elif playans != rand3 / rand1:
+                print("Incorrect")
+                i += 1
         elif opp == '**':
             rand1 = random.randint(1, 10)
             rand2 = random.randint(1, 3)
@@ -63,5 +76,7 @@ if play == 'y':
 print(f"Your score was {score}.")
 if score < rounds / 2:
     print("You lost.")
-if score > rounds / 2:
-    print("You won")
+elif score > rounds / 2:
+    print("You won!")
+elif score == rounds / 2:
+    print("It was a tie.")
