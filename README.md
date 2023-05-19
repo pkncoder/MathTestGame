@@ -1,2 +1,2 @@
-# Math Game / Test 
-This is a math game, you should probably do well or else the game won't be so happy... (nothing is targeted, as it is all for fun).
+# Math Test Game 
+This math test game is a way to try and do math within the terminal. If you can get more that half of the random rounds complete, you win! You get to control the round numeber too!
